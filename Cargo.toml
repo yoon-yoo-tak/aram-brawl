@@ -1,0 +1,20 @@
+[package]
+name = "aram-brawl"
+version = "0.1.0"
+edition = "2024"
+description = "무작위 총력전 아수라장 모드를 CLI에서 플레이하는 작은 게임"
+license = "MIT"
+repository = "https://github.com/yoon-yoo-tak/aram-brawl"
+readme = "README.md"
+keywords = ["game", "cli", "aram", "lol"]
+categories = ["games", "command-line-utilities"]
+
+[dependencies]
+rand = "0.8"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+unicode-width = "0.2"
+
+[profile.release]
+opt-level = 3
+lto = true
