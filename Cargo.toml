@@ -5,6 +5,7 @@ edition = "2024"
 description = "무작위 총력전 아수라장 모드를 CLI에서 플레이하는 작은 게임"
 license = "MIT"
 repository = "https://github.com/yoon-yoo-tak/aram-brawl"
+homepage = "https://github.com/yoon-yoo-tak/aram-brawl"
 readme = "README.md"
 keywords = ["game", "cli", "aram", "lol"]
 categories = ["games", "command-line-utilities"]
@@ -18,3 +19,8 @@ unicode-width = "0.2"
 [profile.release]
 opt-level = 3
 lto = true
+
+# The profile that 'dist' will build with
+[profile.dist]
+inherits = "release"
+lto = "thin"
